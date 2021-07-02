@@ -1,6 +1,4 @@
-# Resources
-
-Here are some of my favourite resources/tools that i use for web development 😉.
+Here are some of my favourite resources and tools that I use daily for web development 😉.
 
 ## <i class="ri-brush-3-fill"></i> Color & Backgrounds
 
@@ -26,7 +24,7 @@ i use `VSCode` as my primary code editor because of its unlimited features
 - Prettier
 - Bracket Pair Colorizer
 - Live Server
-- PHP Intelphense
+- PHP Intelephense
 - Tabnine
 
 ## <i class="ri-terminal-box-fill"></i> Terminal
