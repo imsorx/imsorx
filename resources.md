@@ -15,24 +15,24 @@ Here are some of my favourite resources and tools that I use daily for web devel
 
 ## <i class="ri-code-box-fill"></i> Code Editor
 
-i use `VSCode` as my primary code editor because of its unlimited features
+> I use `VSCode` as my primary code editor because of its unlimited features
 
 **Extensions**
 
+- Gitlens
+- PHP Intelephense
+- Live Server
+- Bracket Pair Colorizer- Tabnine
+- Prettier
 - Popping and Locking Theme
 - Material Icon theme
-- Prettier
-- Bracket Pair Colorizer
-- Live Server
-- PHP Intelephense
-- Tabnine
 
 ## <i class="ri-terminal-box-fill"></i> Terminal
 
 - Powershell with `oh-my-posh` extension
 - zsh (linux)
 
-i'm using `aliases`😎 like `ga => git add` for GIT commands to make life easier
+> I also use `aliases`😎 like `ga => git add` for GIT commands to make life easier
 
 ## <i class="ri-mac-fill"></i> BattleStation
 
