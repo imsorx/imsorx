@@ -1,4 +1,4 @@
-Here are some of my favourite resources and tools that I use daily for web development 😉.
+Here are some of my favorite resources and tools that I use daily for web development 😉.
 
 ## <i class="ri-brush-3-fill"></i> Color & Backgrounds
 
@@ -15,7 +15,7 @@ Here are some of my favourite resources and tools that I use daily for web devel
 
 ## <i class="ri-code-box-fill"></i> Code Editor
 
-> I use `VSCode` as my primary code editor because of its unlimited features
+> I use `VSCode` as my primary code editor
 
 **Extensions**
 
@@ -32,8 +32,6 @@ Here are some of my favourite resources and tools that I use daily for web devel
 - Powershell with `oh-my-posh` extension
 - zsh (linux)
 
-> I also use `aliases`😎 like `ga => git add` for GIT commands to make life easier
-
 ## <i class="ri-mac-fill"></i> BattleStation
 
 - Ryzen 3 3300X
@@ -41,5 +39,5 @@ Here are some of my favourite resources and tools that I use daily for web devel
 - 240GB SSD + 1TB HDD
 - NVIDIA 1660 Super
 - LG 24" 144hz
-- Viper Mini
-- Kechron K2 V2
+- Razer Viper Mini
+- Keychron K2 V2
