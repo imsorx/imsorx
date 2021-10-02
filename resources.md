@@ -4,6 +4,7 @@ Here are some of my favorite resources and tools that I use daily for web develo
 
 - [Colorhunt](https://colorhunt.co)
 - [WebGradient](https://webgradients.com/)
+- [The Pattern Library](http://thepatternlibrary.com/)
 - [Pexels](https://www.pexels.com/)
 
 ## <i class="ri-lightbulb-flash-fill"></i> Icons
@@ -21,21 +22,20 @@ Here are some of my favorite resources and tools that I use daily for web develo
 
 - Gitlens
 - PHP Intelephense
-- Live Server
-- Bracket Pair Colorizer- Tabnine
-- Prettier
-- Popping and Locking Theme
+- Tabnine
+- Beatify
+- GitHub Dark Theme
 - Material Icon theme
 
 ## <i class="ri-terminal-box-fill"></i> Terminal
 
-- Powershell with `oh-my-posh` extension
-- zsh (linux)
+- PowerShell with `oh-my-posh` extension
+- bash with `oh-my-posh` (Linux)
 
 ## <i class="ri-mac-fill"></i> BattleStation
 
 - Ryzen 3 3300X
-- 8 GB
+- 16 GB
 - 240GB SSD + 1TB HDD
 - NVIDIA 1660 Super
 - LG 24" 144hz
