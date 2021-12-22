@@ -19,6 +19,9 @@ jobs:
       run: pip install requests 
     - name: Update readme
       run: python update-readme.py
+      env: 
+      BLOG_INDEX_URL: "https://github.com/imsorx/blog/raw/main/index.json"
+      BLOG_BASE_URL: "https://sorx.space/blog/"
     - name: Commit and push
       run: |-
         git diff
