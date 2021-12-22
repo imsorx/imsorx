@@ -40,4 +40,5 @@ I'm also a avid Gamer🎮, I play mostly FPS like CSGO, Apex Legends, Valorant b
 
 #### Latest posts
 <!-- posts-start -->
+- [Boosting Windows Terminal experience](https://sorx.space/blog/boosting-terminal)
 <!-- posts-end -->
