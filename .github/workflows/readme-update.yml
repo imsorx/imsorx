@@ -1,4 +1,4 @@
-name: Build README
+name: Build README with latest posts
 
 on:
   workflow_dispatch:
@@ -11,21 +11,38 @@ jobs:
     steps:
     - name: Check out repo
       uses: actions/checkout@v2
+
     - name: setup python
       uses: actions/setup-python@v2
       with:
-        python-version: 3.8 
+        python-version: 3.8
+
     - name: Install dependencies
-      run: pip install requests 
+      run: pip install requests
+
     - name: Update readme
       run: python update-readme.py
       env: 
         BLOG_INDEX_URL: "https://github.com/imsorx/blog/raw/main/index.json"
         BLOG_BASE_URL: "https://sorx.space/blog/"
+
+    - name: Verify Changed files
+        uses: tj-actions/verify-changed-files@v8.8
+        id: verify-changed-files
+        with:
+          files: |
+            README.md
+
     - name: Commit and push
+      if: steps.verify-changed-files.outputs.files_changed == 'true'
       run: |-
         git diff
         git config --global user.email "42103905+github-actions[bot]@users.noreply.github.com"
         git config --global user.name "BOT"
         git commit -am "Updated posts"
         git push
+
+    - name: No changes message
+      if: steps.verify-changed-files.outputs.files_changed != 'true'
+      run: |
+        echo "Oops, no new posts :D"
