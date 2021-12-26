@@ -18,7 +18,7 @@ jobs:
         python-version: 3.8
 
     - name: Install dependencies
-      run: pip install requests
+      run: pip install requests pyyaml
 
     - name: Update steam stats
       run: python update-steam-stats.py
