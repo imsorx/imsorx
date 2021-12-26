@@ -1,9 +1,9 @@
-name: Build README with latest posts
+name: Build README with latest steam status
 
 on:
   workflow_dispatch:
   schedule:
-  - cron: "30 15 * * *"
+  - cron: "30 * * * *"
 
 jobs:
   build:
@@ -20,12 +20,11 @@ jobs:
     - name: Install dependencies
       run: pip install requests
 
-    - name: Update readme
-      run: python update-readme.py
+    - name: Update steam stats
+      run: python update-steam-stats.py
       env: 
-        BLOG_INDEX_URL: "https://github.com/imsorx/blog/raw/main/index.json"
-        BLOG_BASE_URL: "https://sorx.space/blog/"
-
+        STEAM_KEY: ${{secrets.STEAM_KEY}}
+        STEAM_ID: ${{secrets.STEAM_ID}}
     - name: Verify Changed files
       uses: tj-actions/verify-changed-files@v8.8
       id: verify-changed-files
@@ -39,10 +38,10 @@ jobs:
         git diff
         git config --global user.name "github-actions"
         git config --global user.email "github-actions@github.com"
-        git commit -am "Updated posts"
+        git commit -am "Updated steam stats"
         git push
 
-    - name: No changes message
+    - name: No changes
       if: steps.verify-changed-files.outputs.files_changed != 'true'
       run: |
-        echo "Oops, no new posts :D"
+        echo "Oops, no updates :D"
