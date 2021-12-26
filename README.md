@@ -46,4 +46,4 @@ I'm also a avid Gamer🎮, I play mostly FPS like CSGO, Apex Legends, Valorant b
 
 ## Steam status
 
-![stats](https://combinatronics.com/imsorx/imsorx/main/steam-stats.svg)
+![stats](https://raw.githubusercontent.com/imsorx/imsorx/main/steam-stats.svg)
