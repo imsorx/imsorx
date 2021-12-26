@@ -64,7 +64,6 @@ class UpdatSteamStats:
 
     def build_content(self, content):
         updates = '<!-- steam-stats-start -->\n'
-        updates += self.get_styles()
         games = ''
         for game in self.__total_games[:4]:
             games += self.get_game_template().format(
@@ -72,6 +71,7 @@ class UpdatSteamStats:
             )
 
         updates += self.get_template().format(
+            styles=self.get_styles(),
             profile_url=self.__userInfo['profileurl'],
             username=self.__userInfo['personaname'],
             avatar_url=self.__userInfo['avatarfull'],
@@ -136,21 +136,28 @@ class UpdatSteamStats:
 
     def get_template(self) -> str:
         return """
-<div class="container">
-    <a href="{profile_url}" target="_blank" class="user-info">
-        <figure>
-            <img src="{avatar_url}" height="60px">
-            <figcaption style="margin-left:0.5em">
-                <strong>{username}</strong></br>
-                <small>{status}</small> </br>
-                <small>{games_count} Games owned</small>
-            </figcaption>
-        </figure>
-    </a>
-    <h4>Frequent games</h4>
-    <div class="games">{games}
-    </div>
-</div>
+<svg fill="none" style="width:100%;height:auto;" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="auto">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            {styles}
+            <div class="container">
+                <a href="{profile_url}" target="_blank" class="user-info">
+                    <figure>
+                        <img src="{avatar_url}" height="60px">
+                        <figcaption style="margin-left:0.5em">
+                            <strong>{username}</strong></br>
+                            <small>{status}</small> </br>
+                            <small>{games_count} Games owned</small>
+                        </figcaption>
+                    </figure>
+                </a>
+                <h4>Frequent games</h4>
+                <div class="games">{games}
+                </div>
+            </div>
+        </div>
+    </foreignObject>
+</svg>
 """
 
     def get_game_template(self) -> str:
