@@ -3,7 +3,7 @@ name: Build README with latest steam status
 on:
   workflow_dispatch:
   schedule:
-  - cron: "30 * * * *"
+  - cron: "15 * * * *"
 
 jobs:
   build:
@@ -23,8 +23,9 @@ jobs:
     - name: Update steam stats
       run: python update-steam-stats.py
       env: 
-        STEAM_KEY: ${{secrets.STEAM_KEY}}
-        STEAM_ID: ${{secrets.STEAM_ID}}
+        STEAM_KEY: ${{ secrets.STEAM_KEY }}
+        STEAM_ID: ${{ secrets.STEAM_ID }}
+        
     - name: Verify Changed files
       uses: tj-actions/verify-changed-files@v8.8
       id: verify-changed-files
