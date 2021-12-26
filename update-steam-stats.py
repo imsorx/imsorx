@@ -32,14 +32,9 @@ class UpdatSteamStats:
         self.write_changes()
 
     def write_changes(self):
-        reader = open('README.md', encoding='utf-8')
-        content = reader.read()
-        reader.close()
-
-        readme = self.build_content(content)
-
-        writer = open('README.md', 'w', encoding='utf-8')
-        writer.write(readme)
+        content = self.build_content()
+        writer = open('steam-stats.svg', 'w', encoding='utf-8')
+        writer.write(content)
         writer.close()
 
     def fetch_info(self):
@@ -62,8 +57,8 @@ class UpdatSteamStats:
             self.__total_games, key=lambda game: game['hrs'], reverse=True)
         self.__total_games_count = len(self.__total_games)
 
-    def build_content(self, content):
-        updates = '<!-- steam-stats-start -->\n'
+    def build_content(self):
+        updates = ''
         games = ''
         for game in self.__total_games[:4]:
             games += self.get_game_template().format(
@@ -79,13 +74,8 @@ class UpdatSteamStats:
             games_count=self.__total_games_count,
             games=games
         )
-        updates += '<!-- steam-stats-end -->'
 
-        # Replace posts
-        pattern = re.compile(
-            r'<!-- steam-stats-start -->[\s\S]*<!-- steam-stats-end -->')
-        readme = re.sub(pattern, updates, content)
-        return readme
+        return updates
 
     def get_status(self) -> str:
         if('gameextrainfo' in self.__userInfo):
