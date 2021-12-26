@@ -1,5 +1,4 @@
 import os
-import logging
 import requests
 import json
 import re
@@ -164,8 +163,7 @@ class UpdatSteamStats:
 
 
 if __name__ == '__main__':
-    logging.basicConfig()
     try:
         worker = UpdatSteamStats()
     except Exception as e:
-        logging.error(e)
+        print(traceback.format_exc())
