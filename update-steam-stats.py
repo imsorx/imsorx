@@ -92,7 +92,7 @@ class UpdatSteamStats:
 
     def get_image(self, url):
         with requests.get(url) as response:
-            return "data:" + response.headers['Content-Type'] + ";" + "base64," + str(base64.b64encode(response.content)).decode("utf-8")
+            return "data:" + response.headers['Content-Type'] + ";" + "base64," + str(base64.b64encode(response.content),'utf-8')
 
     def get_styles(self) -> str:
         return """<style>
