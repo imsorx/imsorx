@@ -1,4 +1,3 @@
-
 <svg fill="none" style="width:100%;height:auto;" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="auto">
         <div xmlns="http://www.w3.org/1999/xhtml">
@@ -42,7 +41,7 @@
                         <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/57/579ff7a502da1102fe40c1bca7f340334f3c96f3_full.jpg" height="60px">
                         <figcaption style="margin-left:0.5em">
                             <strong>SorX</strong></br>
-                            <small>Offline</small> </br>
+                            <small>Offline</small></br>
                             <small>104 Games owned</small>
                         </figcaption>
                     </figure>
