@@ -47,7 +47,11 @@ I'm also a avid Gamer🎮, I play mostly FPS like CSGO, Apex Legends, Valorant b
 ## Steam status
 
 <!-- steam-stats-start -->
-<style>
+
+<svg fill="none" style="width:100%;height:auto;" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="auto">
+        <div xmlns="http://www.w3.org/1999/xhtml">
+            <style>
     .container {
         padding: 1em 1.5em;
     }
@@ -81,19 +85,19 @@ I'm also a avid Gamer🎮, I play mostly FPS like CSGO, Apex Legends, Valorant b
         background-color: inherit;
     }
 </style>
-<div class="container">
-    <a href="https://steamcommunity.com/id/imsorx/" target="_blank" class="user-info">
-        <figure>
-            <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/57/579ff7a502da1102fe40c1bca7f340334f3c96f3_full.jpg" height="60px">
-            <figcaption style="margin-left:0.5em">
-                <strong>SorX</strong></br>
-                <small>Offline</small> </br>
-                <small>104 Games owned</small>
-            </figcaption>
-        </figure>
-    </a>
-    <h4>Frequent games</h4>
-    <div class="games">
+            <div class="container">
+                <a href="https://steamcommunity.com/id/imsorx/" target="_blank" class="user-info">
+                    <figure>
+                        <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/57/579ff7a502da1102fe40c1bca7f340334f3c96f3_full.jpg" height="60px">
+                        <figcaption style="margin-left:0.5em">
+                            <strong>SorX</strong></br>
+                            <small>Offline</small> </br>
+                            <small>104 Games owned</small>
+                        </figcaption>
+                    </figure>
+                </a>
+                <h4>Frequent games</h4>
+                <div class="games">
         <figure>
               <img src="https://media.steampowered.com/steamcommunity/public/images/apps/730/d0595ff02f5c79fd19b06f4d6165c3fda2372820.jpg">
               <figcaption>2900 hrs</figcaption>
@@ -110,6 +114,9 @@ I'm also a avid Gamer🎮, I play mostly FPS like CSGO, Apex Legends, Valorant b
               <img src="https://media.steampowered.com/steamcommunity/public/images/apps/1517290/5e528ce1b7ad6ff72ad4cb285c6a55983a0749e2.jpg">
               <figcaption>59 hrs</figcaption>
         </figure>
-    </div>
-</div>
+                </div>
+            </div>
+        </div>
+    </foreignObject>
+</svg>
 <!-- steam-stats-end -->
