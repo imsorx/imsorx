@@ -87,7 +87,7 @@ class UpdatSteamStats:
             key=self.__key,
             steamId=self.__steamId
         )
-    def get_image(url):
+    def get_image(self,url):
         with requests.get(url) as response:
             return "data:" + response.headers['Content-Type'] + ";" + "base64," + base64.b64encode(response.content)
 
