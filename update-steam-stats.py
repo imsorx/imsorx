@@ -98,6 +98,7 @@ class UpdatSteamStats:
         return """<style>
     .container {
         padding: 1em 1.5em;
+        color:inherit;
     }
     .user-info{
         color:inherit;
