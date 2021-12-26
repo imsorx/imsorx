@@ -1,7 +1,7 @@
 import os
 import requests
 import json
-import re
+import base64
 
 
 class UpdatSteamStats:
@@ -51,7 +51,7 @@ class UpdatSteamStats:
             self.__total_games.append({
                 "name": game['name'],
                 "hrs": round(game['playtime_forever']/60),
-                "image": self.endpoints['img'].format(appId=game['appid'], url=game['img_logo_url'])
+                "image": self.get_image(self.endpoints['img'].format(appId=game['appid'], url=game['img_logo_url']))
             })
         self.__total_games = sorted(
             self.__total_games, key=lambda game: game['hrs'], reverse=True)
@@ -87,6 +87,9 @@ class UpdatSteamStats:
             key=self.__key,
             steamId=self.__steamId
         )
+    def get_image(url):
+        with requests.get(url) as response:
+            return "data:" + response.headers['Content-Type'] + ";" + "base64," + base64.b64encode(response.content)
 
     def get_styles(self) -> str:
         return """<style>
@@ -125,17 +128,17 @@ class UpdatSteamStats:
 </style>"""
 
     def get_template(self) -> str:
-        return """<svg fill="none" style="width:100%;height:auto;" xmlns="http://www.w3.org/2000/svg">
-    <foreignObject width="100%" height="auto">
+        return """<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+    <foreignObject width="100%" height="100%">
         <div xmlns="http://www.w3.org/1999/xhtml">
             {styles}
             <div class="container">
                 <a href="{profile_url}" target="_blank" class="user-info">
                     <figure>
-                        <img src="{avatar_url}" height="60px">
+                        <img src="{avatar_url}" height="60px" />
                         <figcaption style="margin-left:0.5em">
-                            <strong>{username}</strong></br>
-                            <small>{status}</small></br>
+                            <strong>{username}</strong><br />
+                            <small>{status}</small><br />
                             <small>{games_count} Games owned</small>
                         </figcaption>
                     </figure>
@@ -152,7 +155,7 @@ class UpdatSteamStats:
     def get_game_template(self) -> str:
         return """
         <figure>
-              <img src="{src}">
+              <img src="{src}" />
               <figcaption>{hrs} hrs</figcaption>
         </figure>"""
 
