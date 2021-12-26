@@ -1,4 +1,6 @@
 import os
+import sys
+import traceback
 import requests
 import json
 import base64
@@ -67,7 +69,7 @@ class UpdatSteamStats:
 
         updates += self.get_template().format(
             styles=self.get_styles(),
-            profile_url=self.__userInfo['profileurl'],
+            profile_url=self.get_image(self.__userInfo['profileurl']),
             username=self.__userInfo['personaname'],
             avatar_url=self.__userInfo['avatarfull'],
             status=self.get_status(),
@@ -87,9 +89,10 @@ class UpdatSteamStats:
             key=self.__key,
             steamId=self.__steamId
         )
-    def get_image(self,url):
+
+    def get_image(self, url):
         with requests.get(url) as response:
-            return "data:" + response.headers['Content-Type'] + ";" + "base64," + str(base64.b64encode(response.content))
+            return "data:" + response.headers['Content-Type'] + ";" + "base64," + str(base64.b64encode(response.content)).decode("utf-8")
 
     def get_styles(self) -> str:
         return """<style>
