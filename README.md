@@ -87,7 +87,7 @@ I'm also a avid Gamer🎮, I play mostly FPS like CSGO, Apex Legends, Valorant b
 </style>
             <div class="container">
                 <a href="https://steamcommunity.com/id/imsorx/" target="_blank" class="user-info">
-                    <figure>
+                    <figure style="display:flex">
                         <img src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/57/579ff7a502da1102fe40c1bca7f340334f3c96f3_full.jpg" height="60px">
                         <figcaption style="margin-left:0.5em">
                             <strong>SorX</strong></br>
