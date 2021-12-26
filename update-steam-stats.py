@@ -125,8 +125,7 @@ class UpdatSteamStats:
 </style>"""
 
     def get_template(self) -> str:
-        return """
-<svg fill="none" style="width:100%;height:auto;" xmlns="http://www.w3.org/2000/svg">
+        return """<svg fill="none" style="width:100%;height:auto;" xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="auto">
         <div xmlns="http://www.w3.org/1999/xhtml">
             {styles}
@@ -136,7 +135,7 @@ class UpdatSteamStats:
                         <img src="{avatar_url}" height="60px">
                         <figcaption style="margin-left:0.5em">
                             <strong>{username}</strong></br>
-                            <small>{status}</small> </br>
+                            <small>{status}</small></br>
                             <small>{games_count} Games owned</small>
                         </figcaption>
                     </figure>
