@@ -45,8 +45,6 @@ class UpdatSteamStats:
     def fetch_info(self):
         url = self.__url('user_info')
         res = requests.get(url)
-        print(res.status_code)
-        print(self.__key)
         self.__userInfo = json.loads(res.text)['response']['players'][0]
 
     def fetch_games(self):
