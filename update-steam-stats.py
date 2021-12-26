@@ -69,9 +69,9 @@ class UpdatSteamStats:
 
         updates += self.get_template().format(
             styles=self.get_styles(),
-            profile_url=self.get_image(self.__userInfo['profileurl']),
+            profile_url=self.__userInfo['profileurl'],
             username=self.__userInfo['personaname'],
-            avatar_url=self.__userInfo['avatarfull'],
+            avatar_url=self.get_image(self.__userInfo['avatarfull']),
             status=self.get_status(),
             games_count=self.__total_games_count,
             games=games
