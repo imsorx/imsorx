@@ -97,11 +97,13 @@ class UpdatSteamStats:
     def get_styles(self) -> str:
         return """<style>
     .container {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
         padding: 1em 1.5em;
-        color:inherit;
+        color: var(--color-fg-default);
     }
     .user-info{
-        color:inherit;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        color: var(--color-fg-default);
     }
     .user-info:hover{
         text-decoration:none;
@@ -127,6 +129,8 @@ class UpdatSteamStats:
         margin: 0;
         padding: 0;
         color: inherit;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        color: var(--color-fg-default);
         background-color: inherit;
     }
 </style>"""
