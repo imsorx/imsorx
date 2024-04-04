@@ -22,8 +22,8 @@ Here are some of my favorite resources and tools that I use daily for web develo
 
 - Gitlens
 - PHP Intelephense
-- Tabnine
-- Beatify
+- Prettier 
+- ESLint
 - GitHub Dark Theme
 - Material Icon theme
 
@@ -35,9 +35,9 @@ Here are some of my favorite resources and tools that I use daily for web develo
 ## <i class="ri-mac-fill"></i> BattleStation
 
 - Ryzen 3 3300X
-- 16 GB
-- 240GB SSD + 1TB HDD
-- NVIDIA 1660 Super
-- LG 24" 144hz
-- Razer Viper Mini
-- Keychron K2 V2
+- 16 GB RAM
+- 500GB M.2 + 1TB HDD
+- NVIDIA RTX 2060
+- Gigabyte 34" 180 Hz + LG 24" 144hz
+- Razer Viper Mini, Viper Ultimate
+- Epomaker TH80, Keychron K2 V2
